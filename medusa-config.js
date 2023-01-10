@@ -41,10 +41,10 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
 const plugins = [
-  `medusa-fulfillment-manual`,
-  `medusa-payment-manual`,
+  'medusa-fulfillment-manual',
+  'medusa-payment-manual',
   {
-    resolve: `medusa-file-s3`,
+    resolve: 'medusa-file-s3',
     options: {
         s3_url: process.env.S3_URL,
         bucket: process.env.S3_BUCKET,
