@@ -33,7 +33,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL || "postgres://localhost/medusa-store";
 
 // Medusa uses Redis, so this needs configuration as well
-const REDIS_URL = process.env.REDIS_URL || "redis://default:Ius3ljx52drCPW3Si20s@containers-us-west-184.railway.app:6818";
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
@@ -56,7 +56,7 @@ const plugins = [
 
 module.exports = {
   projectConfig: {
-    // redis_url: REDIS_URL,
+   redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
     database_url: DATABASE_URL,
     database_type: "postgres",
