@@ -51,7 +51,7 @@ const plugins = [
         access_key_id: process.env.S3_ACCESS_KEY_ID,
         secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
         region: process.env.S3_REGION,
-        //endpoint:process.env.S3_ENDPOINT,
+        endpoint:"s3.ap-northeast-1.amazon.com"
     },
   },
   // Uncomment to add Stripe support.
