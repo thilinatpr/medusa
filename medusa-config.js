@@ -48,13 +48,11 @@ const plugins = [
     options: {
         s3_url: process.env.S3_URL,
         bucket: process.env.S3_BUCKET,
-        aws_config_object: {
-          region: process.env.S3_REGION,
-          access_key_id: process.env.S3_ACCESS_KEY_ID,
-          secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
-	  accessKeyId: process.env.S3_ACCESS_KEY_ID,
-          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-        },
+        access_key_id: process.env.S3_ACCESS_KEY_ID,
+        secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+        region: process.env.S3_REGION,
+        endpoint:process.env.S3_ENDPOINT,
+
     },
   },
   // Uncomment to add Stripe support.
