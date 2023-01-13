@@ -43,17 +43,17 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const plugins = [
   'medusa-fulfillment-manual',
   'medusa-payment-manual',
-  // {
-  //   resolve: 'medusa-file-s3',
-  //   options: {
-  //       s3_url: process.env.S3_URL,
-  //       bucket: process.env.S3_BUCKET,
-  //       access_key_id: process.env.S3_ACCESS_KEY_ID,
-  //       secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
-  //       region: process.env.S3_REGION
-  //   },
-  // },
   {
+    resolve: 'medusa-file-s3',
+    options: {
+        s3_url: process.env.S3_URL,
+        bucket: process.env.S3_BUCKET,
+        access_key_id: process.env.S3_ACCESS_KEY_ID,
+        secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+        region: process.env.S3_REGION
+    },
+  },
+ /*  {
     resolve: 'medusa-plugin-filestorage-local',
     options: {
     // The baseurl for your medusajs server
@@ -63,7 +63,7 @@ const plugins = [
     // the folder where your files are stored on the server
     fileLocation: "uploads/persistent",
     },
-  },
+  }, */
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
   // {
